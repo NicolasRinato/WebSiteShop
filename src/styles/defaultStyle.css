@@ -1,19 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
 
+body {
+    font-family: "Averia Sans Libre", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 header {
     width:  100%;
-    height: auto;
+    height: 110px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: sienna;
 }
 
 section.logo-img {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     margin: 5px;
 }
@@ -24,6 +32,8 @@ picture.logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 0px 1px 1px rgb(232, 132, 55);
 }
 
 img.logo-img {
@@ -35,12 +45,35 @@ img.logo-img {
 h1.logo-name {
     font-size: 1.5rem;
     margin-left: 25px;
+    font-weight: 700;
 }
 
+nav.navegacao-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 ul {
+    display: flex;
+    gap: 10px;
     list-style-type: none;
 }
+
+ul li a{
+    text-decoration: none;
+    background-color: rgb(232, 132, 55);
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+    ul li a:hover {
+    color: black;
+    background-color: #fcc647;
+}
+
 
 main {
     min-height: calc(100vh - 145px);

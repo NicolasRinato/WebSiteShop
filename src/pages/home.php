@@ -22,21 +22,22 @@
                 <li><a href="produtos.php">Produtos</a></li>
                 <li><a href="servicos.php">Serviços</a></li>
                 <li><a href="contato.php">Contato</a></li>
-                <?php
-                    if (!isset($_SESSION['logado'])) {
-                        echo '<li><a href="registrar.php">Criar Conta</a></li>';
-                        echo '<li><a href="login.php">Fazer Login</a></li>';
-                    }
-                ?>
             </ul>
         </nav>
-        <?php
-            if (isset($_SESSION['logado'])) {
-                echo '<section class="profile-login">';
-                echo '<img src="" alt="" class="profile-login">';
-                echo '</section>';
-            }
-        ?>
+        <section class="user-login">
+                <?php
+                if (!isset($_SESSION['logado'])) {
+                    echo '<ul class="navegacao-header"> <li> <a href="registrar.php">Criar Conta</a> </li>';
+                    echo '<li> <a href="login.php">Fazer Login</a> </li> </ul>';
+                } else {
+                    echo '<picture class="user-photo">';
+                    echo '<img src="../../public/assets/images/defaultProfilePhoto.png" alt="Imagem de Usuario" class="user-photo">';
+                    echo '</picture>';
+                    echo '<ul> <li> <a href="logout.php">LogOut</a> </li> </ul>';
+
+                }
+                ?>
+        </section>
     </header>
     <main>
         <section class="main-container">
